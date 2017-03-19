@@ -13,8 +13,8 @@ public class Prova {
     private int peso;
     private String local;
     private String data;
-    public Discursiva[] dis;
-    public Objetiva[] objeti;
+    public Discursiva[] dis = new Discursiva[20];
+    public Objetiva[] objeti = new Objetiva[20];
     
     
     
@@ -29,6 +29,11 @@ public class Prova {
                     "\n\tPeso: "+this.getPeso()+"\tLocal: "+this.getLocal()+"   Data: "+this.getData()+"\n";
     }
 
+    public String obtemProvaImpressao(){
+        String prova = "";
+        return prova = this.obtemDetalhes()+"\n\tQuestao 1 - "+this;
+    }
+    
     /**
      * @return the nomeDisciplina
      */

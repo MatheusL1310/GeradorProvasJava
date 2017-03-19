@@ -29,10 +29,16 @@ public class Principal {
         
         
         System.out.println("Quantas questoes discursivas?");
-        int qtd = s.nextInt();
+        int qtdDis = s.nextInt();
         //Discursiva discursivas[] = new Discursiva[qtd-1];
-        for (int i = 0;i<qtd;i++){
-            m1.dis[i] = (m1.dis[i].criaDisc());
+        for (int i = 0;i<qtdDis;i++){
+            m1.dis[i].criaDisc();
+        }
+        
+        System.out.println("Quantas questoes objetivas?");
+        int qtdObj = s.nextInt();
+        for (int i = 0;i<qtdObj;i++){
+            m1.objeti[i].criaObjeti();
         }
         
         // TESTE p/ ver se a classe filha consegue usar metodos da classe pai //

@@ -16,9 +16,10 @@ public class Discursiva extends Questao {
     public Discursiva(){
     }
     
-    public Discursiva criaDisc(){
-        Discursiva disc = new Discursiva();
-        disc.criaQuest();
+    public void criaDisc(){
+        //Discursiva disc = new Discursiva();
+        this.criaQuest();
+        
         
         Scanner s = new Scanner(System.in);
         /*System.out.println("Digite a pergunta: ");
@@ -27,8 +28,12 @@ public class Discursiva extends Questao {
         this.peso = s.nextDouble();
         */
         System.out.println("Digite os criterios de correcao: ");
-        disc.criteriosCorrecao = s.nextLine();
-        return disc;
-
+        this.criteriosCorrecao = s.nextLine();
+        //return disc;
+    }
+    
+    public String imprimeDisc(){
+        String disc = "";
+        return disc = this.pergunta+" (Peso "+this.peso+") \n Criterios - "+this.criteriosCorrecao+".\n";
     }
 }
