@@ -17,6 +17,8 @@ public class Principal {
         Scanner s = new Scanner(System.in);
         JOptionPane.showConfirmDialog(null, "Deseja criar uma prova?");
         Prova m1 = new Prova();
+        
+        // CRIANDO CABECALHO
         System.out.println("Qual a disciplina? ");
         m1.setNomeDisciplina(s.nextLine());        
         System.out.println("Qual o local?");
@@ -27,21 +29,27 @@ public class Principal {
         m1.setPeso(s.nextInt()); 
         String lixo = s.nextLine(); 
         
-        
+        // ADICIONANDO QUESTOES DISCURSIVAS
         System.out.println("Quantas questoes discursivas?");
-        int qtdDis = s.nextInt();
+        m1.qtdDis = s.nextInt();
         //Discursiva discursivas[] = new Discursiva[qtd-1];
-        for (int i = 0;i<qtdDis;i++){
+        for (int i = 0;i<m1.qtdDis;i++){
             m1.dis[i].criaDisc();
         }
         
+        // ADICIONANDO QUESTOES OBJETIVAS
         System.out.println("Quantas questoes objetivas?");
-        int qtdObj = s.nextInt();
-        for (int i = 0;i<qtdObj;i++){
+        m1.qtdObj = s.nextInt();
+        for (int i = 0;i<m1.qtdObj;i++){
             m1.objeti[i].criaObjeti();
         }
         
-        // TESTE p/ ver se a classe filha consegue usar metodos da classe pai //
+        //  IMPRESSAO DA PROVA COMPLETA
+        System.out.println(m1.obtemProvaImpressao());
+        
+        
+
+// TESTE p/ ver se a classe filha consegue usar metodos da classe pai //
         /*Discursiva aux = new Discursiva();
         aux.criaDisc();
         System.out.println("Perg: "+aux.pergunta);

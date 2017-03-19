@@ -34,6 +34,10 @@ public class Discursiva extends Questao {
     
     public String imprimeDisc(){
         String disc = "";
-        return disc = this.pergunta+" (Peso "+this.peso+") \n Criterios - "+this.criteriosCorrecao+".\n";
+        return disc = this.pergunta+" (Peso "+this.peso+") \n Criterios - "+this.criteriosCorrecao+".\n"
+                + "__________________________________________________________________________________\n"
+                + "__________________________________________________________________________________\n"
+                + "__________________________________________________________________________________\n"
+                + "__________________________________________________________________________________\n";
     }
 }

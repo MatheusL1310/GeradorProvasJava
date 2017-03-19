@@ -15,7 +15,7 @@ public class Prova {
     private String data;
     public Discursiva[] dis = new Discursiva[20];
     public Objetiva[] objeti = new Objetiva[20];
-    
+    public int qtdDis = 0, qtdObj = 0;
     
     
     public Prova(){
@@ -31,7 +31,14 @@ public class Prova {
 
     public String obtemProvaImpressao(){
         String prova = "";
-        return prova = this.obtemDetalhes()+"\n\tQuestao 1 - "+this;
+        prova = this.obtemDetalhes();
+        for(int i = 0;i<this.qtdDis;i++){
+            prova += "\n\tQuestao "+(i+1)+" - "+this.dis[i].imprimeDisc();
+        }
+        for(int j = 0; j<this.qtdObj;j++){
+            prova += "\n\tQuestao "+(j+1)+" - "+this.objeti[j].imprimeObjeti();
+        }
+        return prova;
     }
     
     /**
