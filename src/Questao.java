@@ -9,18 +9,19 @@ import java.util.Scanner;
  *
  * @author matheus
  */
-public class Questao {
+public abstract class Questao {
     public String pergunta = "";
     public double peso;
 	
 
-       public void criaQuest(){
-            Scanner s = new Scanner(System.in);
-            System.out.println("Digite a pergunta: ");
-            this.pergunta = s.nextLine();
-            System.out.println("Digite o peso da questao: ");
-            this.peso = Double.parseDouble(s.nextLine());
+    public void criaQuest(){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Digite a pergunta: ");
+        this.pergunta = s.nextLine();
+        System.out.println("Digite o peso da questao: ");
+        this.peso = Double.parseDouble(s.nextLine());
         }
+    public abstract String retornaQuestao();
 
 
 }

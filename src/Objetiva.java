@@ -31,9 +31,9 @@ public class Objetiva extends Questao {
         //String lixo = s.nextLine();
     }
     
-    public String imprimeObjeti(){
+    public String retornaQuestao(){
         String objeti = "";
-        return objeti = this.pergunta+" (Peso "+this.peso+") \n "
+        return objeti = this.pergunta+" (Peso "+this.peso+") \n"
                 + "a) "+this.opcoes[0]+"\n"
                 + "b) "+this.opcoes[1]+"\n"
                 + "c) "+this.opcoes[2]+"\n"

@@ -33,10 +33,10 @@ public class Prova {
         String prova = "";
         prova = this.obtemDetalhes();
         for(int i = 0;i<this.qtdDis;i++){
-            prova += "\n\tQuestao "+(i+1)+" - "+this.dis[i].imprimeDisc();
+            prova += "\n\tQuestao "+(i+1)+" - "+this.dis[i].imprimeQuestao();
         }
         for(int j = 0; j<this.qtdObj;j++){
-            prova += "\n\tQuestao "+(j+1)+" - "+this.objeti[j].imprimeObjeti();
+            prova += "\n\tQuestao "+(j+1)+" - "+this.objeti[j].imprimeQuestao();
         }
         return prova;
     }
