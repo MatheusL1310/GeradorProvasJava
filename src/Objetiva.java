@@ -27,8 +27,8 @@ public class Objetiva extends Questao {
         this.opcoes[i] = s.nextLine();
         }
         System.out.println("Digite a opcao correta: [1=a,2=b,...]");
-        this.respostaCorreta = s.nextInt()-1;
-        String lixo = s.nextLine();
+        this.respostaCorreta = (Integer.parseInt(s.nextLine()))-1;
+        //String lixo = s.nextLine();
     }
     
     public String imprimeObjeti(){

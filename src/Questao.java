@@ -19,7 +19,7 @@ public class Questao {
             System.out.println("Digite a pergunta: ");
             this.pergunta = s.nextLine();
             System.out.println("Digite o peso da questao: ");
-            this.peso = s.nextDouble();
+            this.peso = Double.parseDouble(s.nextLine());
         }
 
 

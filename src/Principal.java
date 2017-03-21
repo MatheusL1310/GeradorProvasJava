@@ -26,21 +26,25 @@ public class Principal {
         System.out.println("Qual a data?");
         m1.setData(s.nextLine());
         System.out.println("Qual o peso?");
-        m1.setPeso(s.nextInt()); 
-        String lixo = s.nextLine(); 
+        m1.setPeso(Double.parseDouble(s.nextLine())); 
+        //String lixo = s.nextLine(); 
         
         // ADICIONANDO QUESTOES DISCURSIVAS
         System.out.println("Quantas questoes discursivas?");
-        m1.qtdDis = s.nextInt();
+        m1.qtdDis = (Integer.parseInt(s.nextLine())) ;
         //Discursiva discursivas[] = new Discursiva[qtd-1];
+        m1.dis = new Discursiva[m1.qtdDis];
         for (int i = 0;i<m1.qtdDis;i++){
+            m1.dis[i] = new Discursiva();
             m1.dis[i].criaDisc();
         }
         
         // ADICIONANDO QUESTOES OBJETIVAS
         System.out.println("Quantas questoes objetivas?");
-        m1.qtdObj = s.nextInt();
+        m1.qtdObj = Integer.parseInt(s.nextLine()); 
+        m1.objeti = new Objetiva[m1.qtdObj];
         for (int i = 0;i<m1.qtdObj;i++){
+            m1.objeti[i] = new Objetiva();
             m1.objeti[i].criaObjeti();
         }
         

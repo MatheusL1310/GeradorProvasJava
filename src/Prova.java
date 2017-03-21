@@ -10,23 +10,23 @@
  */
 public class Prova {
     private String nomeDisciplina;
-    private int peso;
+    private double peso;
     private String local;
     private String data;
-    public Discursiva[] dis = new Discursiva[20];
-    public Objetiva[] objeti = new Objetiva[20];
+    public Discursiva[] dis;
+    public Objetiva[] objeti;
     public int qtdDis = 0, qtdObj = 0;
     
     
     public Prova(){
         //this.nomeDisciplina = a;
-        this.peso = 10;
+        this.peso = 10.0;
     }
     
     public String obtemDetalhes(){
         String cabecalho = "";
-        return cabecalho = "\n\tNome:                     \tDisciplina: "+this.getNomeDisciplina()+
-                    "\n\tPeso: "+this.getPeso()+"\tLocal: "+this.getLocal()+"   Data: "+this.getData()+"\n";
+        return cabecalho = "\nNome:                     \tDisciplina: "+this.getNomeDisciplina()+
+                    "\nPeso: "+this.getPeso()+"\tLocal: "+this.getLocal()+"   Data: "+this.getData()+"\n";
     }
 
     public String obtemProvaImpressao(){
@@ -58,14 +58,14 @@ public class Prova {
     /**
      * @return the peso
      */
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
     /**
      * @param peso the peso to set
      */
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
