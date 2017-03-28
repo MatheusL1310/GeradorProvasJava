@@ -1,6 +1,3 @@
-
-import java.util.ArrayList;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,9 +13,8 @@ public class Prova {
     private double peso;
     private String local;
     private String data;
-    ArrayList<Questao> questoes = new ArrayList<Questao>();
-    //public Discursiva[] dis;
-    //public Objetiva[] objeti;
+    public Discursiva[] dis;
+    public Objetiva[] objeti;
     public int qtdDis = 0, qtdObj = 0;
     
     
@@ -29,27 +25,19 @@ public class Prova {
     
     public String obtemDetalhes(){
         String cabecalho = "";
-        return cabecalho = "\nNome:                     \t\t\t\tDisciplina: "+this.getNomeDisciplina()+
-                    "\nPeso: "+this.getPeso()+"\t\tLocal: "+this.getLocal()+"   \t\tData: "+this.getData()+"\n";
+        return cabecalho = "\nNome:                     \tDisciplina: "+this.getNomeDisciplina()+
+                    "\nPeso: "+this.getPeso()+"\tLocal: "+this.getLocal()+"   Data: "+this.getData()+"\n";
     }
 
     public String obtemProvaImpressao(){
         String prova = "";
-        int cont = 0;
         prova = this.obtemDetalhes();
-        
-        for(int i = 0;i<questoes.size();i++){
-            prova += "\n\tQuestao "+(i+1)+" - "+this.questoes.get(i).retornaQuestao();            
-        }
-        
-        /*for(int i = 0;i<this.qtdDis;i++){
-            cont++;
-            prova += "\n\tQuestao "+(cont)+" - "+this.dis[i].retornaQuestao();
+        for(int i = 0;i<this.qtdDis;i++){
+            prova += "\n\tQuestao "+(i+1)+" - "+this.dis[i].imprimeQuestao();
         }
         for(int j = 0; j<this.qtdObj;j++){
-            cont++;
-            prova += "\n\tQuestao "+(cont)+" - "+this.objeti[j].retornaQuestao();
-        }*/
+            prova += "\n\tQuestao "+(j+1)+" - "+this.objeti[j].imprimeQuestao();
+        }
         return prova;
     }
     

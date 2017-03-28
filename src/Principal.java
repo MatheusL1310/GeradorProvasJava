@@ -29,36 +29,7 @@ public class Principal {
         m1.setPeso(Double.parseDouble(s.nextLine())); 
         //String lixo = s.nextLine(); 
         
-        int var = 1;
-        while(var == 1){
-            System.out.println("Deseja adicionar uma questao? (Sim = 1/Nao = 0)");
-            //if(s.nextLine() == "S" || s.nextLine() == "s")
-            if(Integer.parseInt(s.nextLine())== 1){
-                System.out.println("Tipo: \n 1 - Discursiva \n 2 - Objetiva");
-                int t = Integer.parseInt(s.nextLine());
-                switch(t){
-                    case 1: 
-                        Discursiva dis = new Discursiva();
-                        dis.criaDisc();
-                        m1.questoes.add(dis);
-                        break;
-                    case 2:
-                        Objetiva objeti = new Objetiva();
-                        objeti.criaObjeti();
-                        m1.questoes.add(objeti);
-                        break;
-                    default: System.out.println("Opcao invalida!");
-                        break;
-                }
-            
-            } else {
-                //if(s.nextLine() == "N" || s.nextLine() == "n")
-                //if(Integer.parseInt(s.nextLine())== 0)
-                    var = 0;
-            }
-        }
-        
-       /* // ADICIONANDO QUESTOES DISCURSIVAS
+        // ADICIONANDO QUESTOES DISCURSIVAS
         System.out.println("Quantas questoes discursivas?");
         m1.qtdDis = (Integer.parseInt(s.nextLine())) ;
         //Discursiva discursivas[] = new Discursiva[qtd-1];
@@ -75,7 +46,7 @@ public class Principal {
         for (int i = 0;i<m1.qtdObj;i++){
             m1.objeti[i] = new Objetiva();
             m1.objeti[i].criaObjeti();
-        }*/
+        }
         
         //  IMPRESSAO DA PROVA COMPLETA
         System.out.println(m1.obtemProvaImpressao());
