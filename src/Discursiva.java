@@ -22,11 +22,7 @@ public class Discursiva extends Questao {
         
         
         Scanner s = new Scanner(System.in);
-        /*System.out.println("Digite a pergunta: ");
-        this.pergunta = s.nextLine();
-        System.out.println("Digite o peso da questao: ");
-        this.peso = s.nextDouble();
-        */
+       
         System.out.println("Digite os criterios de correcao: ");
         this.criteriosCorrecao = s.nextLine();
         //return disc;
