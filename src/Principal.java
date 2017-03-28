@@ -26,23 +26,56 @@ public class Principal {
         System.out.println("Qual a data?");
         m1.setData(s.nextLine());
         System.out.println("Qual o peso?");
-        m1.setPeso(s.nextInt()); 
-        String lixo = s.nextLine(); 
+        m1.setPeso(Double.parseDouble(s.nextLine())); 
+        //String lixo = s.nextLine(); 
         
-        // ADICIONANDO QUESTOES DISCURSIVAS
+        int var = 1;
+        while(var == 1){
+            System.out.println("Deseja adicionar uma questao? (Sim = 1/Nao = 0)");
+            //if(s.nextLine() == "S" || s.nextLine() == "s")
+            if(Integer.parseInt(s.nextLine())== 1){
+                System.out.println("Tipo: \n 1 - Discursiva \n 2 - Objetiva");
+                int t = Integer.parseInt(s.nextLine());
+                switch(t){
+                    case 1: 
+                        Discursiva dis = new Discursiva();
+                        dis.criaDisc();
+                        m1.questoes.add(dis);
+                        break;
+                    case 2:
+                        Objetiva objeti = new Objetiva();
+                        objeti.criaObjeti();
+                        m1.questoes.add(objeti);
+                        break;
+                    default: System.out.println("Opcao invalida!");
+                        break;
+                }
+            
+            } else {
+                //if(s.nextLine() == "N" || s.nextLine() == "n")
+                //if(Integer.parseInt(s.nextLine())== 0)
+                    var = 0;
+            }
+        }
+        
+       /* // ADICIONANDO QUESTOES DISCURSIVAS
         System.out.println("Quantas questoes discursivas?");
-        m1.qtdDis = s.nextInt();
+        m1.qtdDis = (Integer.parseInt(s.nextLine())) ;
         //Discursiva discursivas[] = new Discursiva[qtd-1];
+        m1.dis = new Discursiva[m1.qtdDis];
         for (int i = 0;i<m1.qtdDis;i++){
+            m1.dis[i] = new Discursiva();
             m1.dis[i].criaDisc();
         }
         
         // ADICIONANDO QUESTOES OBJETIVAS
         System.out.println("Quantas questoes objetivas?");
-        m1.qtdObj = s.nextInt();
+        m1.qtdObj = Integer.parseInt(s.nextLine()); 
+        m1.objeti = new Objetiva[m1.qtdObj];
         for (int i = 0;i<m1.qtdObj;i++){
+            m1.objeti[i] = new Objetiva();
             m1.objeti[i].criaObjeti();
-        }
+        }*/
         
         //  IMPRESSAO DA PROVA COMPLETA
         System.out.println(m1.obtemProvaImpressao());
